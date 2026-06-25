@@ -15,6 +15,14 @@ def character_count(file_contents):
         else:
             char_dict[char] = 1
                 
-    for char in char_dict:
-        count = char_dict[char]
-        print(f"'{char}': {count}")
+    return char_dict
+
+def sort_on(unsorted_list):
+    sorted_list = sorted(unsorted_list, reverse=True)
+    return sorted_list
+
+def chars_dict_to_sorted_list(chars_dict):
+    chars_list = list(chars_dict.items())
+    sorted_chars_list = sort_on(chars_list)
+    for item in sorted_chars_list:
+        print(item)
