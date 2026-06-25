@@ -24,5 +24,7 @@ def sort_on(unsorted_list):
 def chars_dict_to_sorted_list(chars_dict):
     chars_list = list(chars_dict.items())
     sorted_chars_list = sort_on(chars_list)
+    result = []
     for item in sorted_chars_list:
-        print(item)
+        result.append({'char': item[0], 'num': item[1]})
+    return result
